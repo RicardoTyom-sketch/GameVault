@@ -1,4 +1,5 @@
 plugins {
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
@@ -36,6 +37,10 @@ android {
 }
 
 dependencies {
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.serialization)
+    implementation(libs.okhttp.core)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)

@@ -1,4 +1,6 @@
 [versions]
+okhttpVersion = "4.12.0"
+retrofitVersion = "3.0.0"
 serializationJson = "1.9.0"
 agp = "9.4.1"
 coreKtx = "1.19.1"
@@ -11,6 +13,9 @@ kotlin = "2.2.10"
 composeBom = "2026.02.01"
 
 [libraries]
+okhttp-core = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttpVersion" }
+retrofit-serialization = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofitVersion" }
+retrofit-core = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serializationJson" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
