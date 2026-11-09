@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.gamevault.movile"
+    namespace = "com.gamevault.mobile"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.gamevault.movile"
+        applicationId = "com.gamevault.mobile"
         minSdk = 26
         targetSdk = 37
         versionCode = 1
@@ -37,6 +37,10 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit.core)
     implementation(libs.retrofit.serialization)
